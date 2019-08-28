@@ -1,0 +1,5 @@
+%2F%2F Cool Class Diagram, [FHIR Context{bg:springgreen}]->[RESTful Generic Client{bg:violet}]
+[Construct FHIR Model{bg:yellow}]-.->[RESTful Generic Client{bg:violet}]
+[RESTful Generic Client{bg:violet}]           create()->[INSERT{bg:powderblue}]
+[RESTful Generic Client{bg:violet}] search ()->[Query{bg:powderblue}]
+[RESTful Generic Client{bg:violet}] GET()->[READ{bg:powderblue}]

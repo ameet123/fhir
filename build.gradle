@@ -23,6 +23,9 @@ bootJar {
 
 repositories {
     mavenCentral()
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots"
+    }
 }
 
 sourceCompatibility = 1.8
@@ -31,6 +34,11 @@ targetCompatibility = 1.8
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("com.fasterxml.jackson.core:jackson-databind")
+    compile 'ca.uhn.hapi.fhir:hapi-fhir-base:4.0.0'
+    compile group: 'ca.uhn.hapi.fhir', name: 'hapi-fhir-structures-r4', version: '4.0.0'
+//    compile group: 'ca.uhn.hapi.fhir', name: 'hapi-fhir-structures-dstu3', version: '4.0.0'
+    compile group: 'ca.uhn.hapi.fhir', name: 'hapi-fhir-client', version: '4.0.0'
+    compile group: 'ca.uhn.hapi.fhir', name: 'org.hl7.fhir.utilities', version: '4.0.0'
     testCompile('org.springframework.boot:spring-boot-starter-test')
 
 }
